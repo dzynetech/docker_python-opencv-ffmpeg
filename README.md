@@ -14,7 +14,6 @@ Repository for clean Dockerfile containing [FFmpeg](https://www.ffmpeg.org/), [O
 [![DockerHub Pulls](https://img.shields.io/docker/pulls/bjubes/docker_python-opencv-ffmpeg.svg)](https://hub.docker.com/r/bjubes/docker_python-opencv-ffmpeg)
 [![Docker](https://img.shields.io/docker/automated/bjubes/docker_python-opencv-ffmpeg)](https://hub.docker.com/r/bjubes/docker_python-opencv-ffmpeg)
 
-
 First you need to install docker on your local computer, see following [tutorial](https://docs.docker.com/install/linux/docker-ce/ubuntu/#set-up-the-repository). Note, for running the docker properly you have be logged as superuser otherwise you will face many partial issues which sometimes does not make much sense.
 
 You can build it on your own, note it takes lots of time, be prepared.
