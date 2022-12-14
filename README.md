@@ -1,22 +1,18 @@
 # Docker: Python-OpenCV-FFmpeg(-CUDA)
 
-Repository for clean Dockerfile containing [FFmpeg](https://www.ffmpeg.org/), [OpenCV4](https://opencv.org/) and [Python2/3](https://www.python.org/), based on [Ubuntu](https://www.ubuntu.com/) 20.04 LTS.
+Repository for clean Dockerfile containing [FFmpeg](https://www.ffmpeg.org/), [OpenCV4](https://opencv.org/) and [Python3](https://www.python.org/), based on [Ubuntu](https://www.ubuntu.com/) 20.04 LTS.
 
 ## Tags
 
-- `:cpu-pyX.y-cvX.y.z` for Python 2.x/3.x, OpenCV 4.6.x, FFmpeg
-- `:gpu-pyX.y-cvX.y.z` for Python 2.x/3.x, OpenCV 4.6.x, FFmpeg with CUDA 11.4 support
+- `:cpu-pyX.y-cvX.y.z` for Python 3.x, OpenCV 4.6.x, FFmpeg
+- `:gpu-pyX.y-cvX.y.z` for Python 3.x, OpenCV 4.6.x, FFmpeg with CUDA 11.4 support
 
 ## Build
 
-[![Publish Docker Image](https://github.com/Borda/docker_python-opencv-ffmpeg/workflows/Publish%20Docker%20Image/badge.svg?branch=master&event=push)](https://github.com/Borda/docker_python-opencv-ffmpeg/actions?query=workflow%3A%22Publish+Docker+Image%22)
-[![Docker Build Status](https://img.shields.io/docker/cloud/build/borda/docker_python-opencv-ffmpeg)](https://hub.docker.com/r/borda/docker_python-opencv-ffmpeg)
-[![DockerHub Pulls](https://img.shields.io/docker/pulls/borda/docker_python-opencv-ffmpeg.svg)](https://hub.docker.com/r/borda/docker_python-opencv-ffmpeg)
-[![Docker](https://img.shields.io/docker/automated/borda/docker_python-opencv-ffmpeg)](https://hub.docker.com/r/borda/docker_python-opencv-ffmpeg)
-
-<!--
-[![Build Status](https://travis-ci.org/Borda/docker_python-opencv-ffmpeg.svg?branch=master)](https://travis-ci.org/Borda/docker_python-opencv-ffmpeg)
--->
+[![Publish Docker Image](https://github.com/dzynetech/docker_python-opencv-ffmpeg/workflows/Publish%20Docker%20Image/badge.svg?branch=master&event=push)](https://github.com/dzynetech/docker_python-opencv-ffmpeg/actions?query=workflow%3A%22Publish+Docker+Image%22)
+[![Docker Build Status](https://img.shields.io/docker/cloud/build/bjubes/docker_python-opencv-ffmpeg)](https://hub.docker.com/r/bjubes/docker_python-opencv-ffmpeg)
+[![DockerHub Pulls](https://img.shields.io/docker/pulls/bjubes/docker_python-opencv-ffmpeg.svg)](https://hub.docker.com/r/bjubes/docker_python-opencv-ffmpeg)
+[![Docker](https://img.shields.io/docker/automated/bjubes/docker_python-opencv-ffmpeg)](https://hub.docker.com/r/bjubes/docker_python-opencv-ffmpeg)
 
 First you need to install docker on your local computer, see following [tutorial](https://docs.docker.com/install/linux/docker-ce/ubuntu/#set-up-the-repository). Note, for running the docker properly you have be logged as superuser otherwise you will face many partial issues which sometimes does not make much sense.
 
