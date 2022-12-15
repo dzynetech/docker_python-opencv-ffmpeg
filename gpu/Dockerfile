@@ -10,7 +10,7 @@ ARG UBUNTU_VERSION=22.04
 
 FROM nvidia/cuda:${CUDA_VERSION}-devel-ubuntu${UBUNTU_VERSION}
 
-LABEL maintainer="https://github.com/Borda"
+LABEL maintainer="https://github.com/dzynetech"
 
 ARG PYTHON_VERSION=3.9
 ARG OPENCV_VERSION=4.9.0
@@ -47,13 +47,10 @@ RUN \
 
     # install python dependencies
     # sysctl -w net.ipv4.ip_forward=1 ; \
-    if [[ "$PYTHON_VERSION" == "2.7" || "$PYTHON_VERSION" == "3.6" ]]; then \
-        PIP_URL="https://bootstrap.pypa.io/pip/$PYTHON_VERSION/get-pip.py" ; \
-    else \
-        apt-get -y install --no-install-recommends python${PYTHON_VERSION}-distutils ; \
-        PIP_URL="https://bootstrap.pypa.io/get-pip.py" ; \
-    fi && \
-    curl $PIP_URL | python
+    apt-get -y install --no-install-recommends python${PYTHON_VERSION}-distutils ; \
+    wget https://bootstrap.pypa.io/get-pip.py --progress=bar:force:noscroll --no-check-certificate ; \
+    python${PYTHON_VERSION} get-pip.py && \
+    rm get-pip.py
 
 ENV PYTHONPATH="/usr/lib/python${PYTHON_VERSION}/site-packages:/usr/local/lib/python${PYTHON_VERSION}/site-packages"
 
