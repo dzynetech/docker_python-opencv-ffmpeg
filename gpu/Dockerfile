@@ -9,7 +9,7 @@ ARG CUDA_VERSION=11.4.0
 
 FROM nvidia/cuda:${CUDA_VERSION}-devel-ubuntu20.04
 
-LABEL maintainer="https://github.com/Borda"
+LABEL maintainer="https://github.com/dzynetech"
 
 ARG PYTHON_VERSION=3.9
 ARG OPENCV_VERSION=4.6.0
@@ -42,12 +42,8 @@ RUN \
 
     # install python dependencies
     # sysctl -w net.ipv4.ip_forward=1 ; \
-    if [[ "$PYTHON_VERSION" == "2.7" || "$PYTHON_VERSION" == "3.6" ]]; then \
-        wget https://bootstrap.pypa.io/pip/$PYTHON_VERSION/get-pip.py --progress=bar:force:noscroll --no-check-certificate ; \
-    else \
-        apt-get -y install --no-install-recommends python${PYTHON_VERSION}-distutils ; \
-        wget https://bootstrap.pypa.io/get-pip.py --progress=bar:force:noscroll --no-check-certificate ; \
-    fi && \
+    apt-get -y install --no-install-recommends python${PYTHON_VERSION}-distutils ; \
+    wget https://bootstrap.pypa.io/get-pip.py --progress=bar:force:noscroll --no-check-certificate ; \
     python${PYTHON_VERSION} get-pip.py && \
     rm get-pip.py
 
