@@ -50,5 +50,5 @@ jobs:
           file: ${{ matrix.device }}/Dockerfile
           # publish master
           push: ${{ github.ref == 'refs/heads/master' }}
-          tags: bjubes/docker_python-opencv-ffmpeg:${{ matrix.device }}-py${{ matrix.python_version }}-cv${{ matrix.opencv_version }}
+          tags: dzynetech/docker_python-opencv-ffmpeg:${{ matrix.device }}-py${{ matrix.python_version }}-cv${{ matrix.opencv_version }}
         timeout-minutes: 240
